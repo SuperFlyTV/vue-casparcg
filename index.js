@@ -21,13 +21,25 @@ export default {
         }
     },
     onIframeMessage: function(message){
-        if(message.data.functionName){
-            var functionName = message.data.functionName
-            delete message.data.functionName
-            if(global.hasOwnProperty(functionName) && typeof global[functionName] === 'function') {
-                global[functionName].call(global, message.data)
-            }
+      var templateData = message.data
+      if (typeof templateData === 'string') {
+          console.log(templateData)
+          templateData = templateData.replace(/^(<templateData>|<componentData>|<data>)|(<\/templateData>|<\/componentData>|<\/data>)$/ig, '')
+          console.log(templateData)
+          try {
+              templateData = JSON.parse(decodeURI(templateData))
+              console.log(templateData)
+          } catch (e) {}
+      } 
+      if(templateData && typeof templateData === 'object') {
+          if(templateData.functionName){
+          var functionName = templateData.functionName
+          delete templateData.functionName
+          if(global.hasOwnProperty(functionName) && typeof global[functionName] === 'function') {
+              global[functionName].call(global, templateData)
+          }
         }
+      }
     },
     casparComponent: {
         created: function () {
