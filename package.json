@@ -1,0 +1,17 @@
+{
+  "name": "vue-casparcg",
+  "version": "0.0.0",
+  "description": "A CasparCG mixin for Vue.js exposing the CG API to CasparCG",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "casparcg"
+  ],
+  "author": "Jesper Stærkær @ SuperFly.tv <jesper@superfly.tv>",
+  "license": "MIT",
+  "devDependencies": {
+    "standard-version": "^4.2.0"
+  }
+}

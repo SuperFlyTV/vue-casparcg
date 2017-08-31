@@ -1,0 +1,231 @@
+* {
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+/** GRID */
+body .fullframe {
+	width: 100vw;
+	height: 100vh;
+	left: 0vw;
+	top: 0vh;
+	right: 0vw;
+	bottom: 0vh;
+	position: fixed;
+}
+body .actionsafe {
+	width: 93vw;
+	height: 93vh;
+	left: 3.5vw;
+	top: 3.5vh;
+	right: 3.5vw;
+	bottom: 3.5vh;
+	position: fixed;
+}
+body .titlesafe {
+	width: 90vw;
+	height: 90vh;
+	left: 5vw;
+	top: 5vh;
+	right: 5vw;
+	bottom: 5vh;
+	position: fixed;
+}
+body .actionsafe.left, .fullframe .actionsafe.left {
+	left: 3.5vw;
+	right: auto;
+}
+.left, .fullframe.left {
+	left: 0vw;
+	right: auto;
+	position: fixed;
+}
+.actionsafe .left{
+	left: 0vw;
+	right: auto;
+}
+.fullframe .actionsafe.left {
+	position: absolute;
+}
+body .titlesafe.left, .fullframe .titlesafe.left {
+	left: 5vw;
+	right: auto;
+}
+.titlesafe .left{
+	left: 0vw;
+	right: auto;
+}
+.fullframe .titlesafe.left {
+	position: absolute;
+}
+ .actionsafe .titlesafe.left {
+	left: 1.5vw;
+	right: auto;
+	position: absolute;
+}
+.titlesafe .actionsafe.left {
+	left: -1.5vw;
+	right: auto;
+	position: absolute;
+}
+.titlesafe .fullframe.left {
+	left: -5vw;
+	right: auto;
+	position: absolute;
+}
+body .actionsafe.top, .fullframe .actionsafe.top {
+	top: 3.5vh;
+	bottom: auto;
+}
+.top, .fullframe.top {
+	top: 0vh;
+	bottom: auto;
+	position: fixed;
+}
+.actionsafe .top{
+	top: 0vh;
+	bottom: auto;
+}
+.fullframe .actionsafe.top {
+	position: absolute;
+}
+body .titlesafe.top, .fullframe .titlesafe.top {
+	top: 5vh;
+	bottom: auto;
+}
+ .titlesafe .top,{
+	top: 0vh;
+	bottom: auto;
+ }
+.fullframe .titlesafe.top {
+	position: absolute;
+}
+ .actionsafe .titlesafe.top {
+	top: 1.5vh;
+	bottom: auto;
+	position: absolute;
+}
+.titlesafe .actionsafe.top {
+	top: -1.5vh;
+	bottom: auto;
+	position: absolute;
+}
+.titlesafe .fullframe.top {
+	top: -5vh;
+	bottom: auto;
+	position: absolute;
+}
+body .actionsafe.right, .fullframe .actionsafe.right {
+	right: 3.5vw;
+	left: auto;
+}
+.right, .fullframe.right {
+	right: 0vw;
+	left: auto;
+	position: fixed;
+}
+.actionsafe .right{
+	right: 0vw;
+	left: auto;
+}
+.fullframe .actionsafe.right {
+	position: absolute;
+}
+body .titlesafe.right, .fullframe .titlesafe.right {
+	right: 5vw;
+	left: auto;
+}
+.titlesafe .right{
+	right: 0vw;
+	left: auto;
+}
+.fullframe .titlesafe.right {
+	position: absolute;
+}
+ .actionsafe .titlesafe.right {
+	right: 1.5vw;
+	left: auto;
+	position: absolute;
+}
+.titlesafe .actionsafe.right {
+	right: -1.5vw;
+	left: auto;
+	position: absolute;
+}
+.titlesafe .fullframe.right {
+	right: -5vw;
+	left: auto;
+	position: absolute;
+}
+body .actionsafe.bottom, .fullframe .actionsafe.bottom {
+	bottom: 3.5vh;
+	top: auto;
+}
+.bottom, .fullframe.bottom {
+	bottom: 0vh;
+	top: auto;
+	position: fixed;
+}
+.actionsafe .bottom{
+	bottom: 0vh;
+	top: auto;
+}
+.fullframe .actionsafe.bottom {
+	position: absolute;
+}
+body .titlesafe.bottom, .fullframe .titlesafe.bottom {
+	bottom: 5vh;
+	top: auto;
+}
+.titlesafe .bottom{
+	bottom: 0vh;
+	top: auto;
+}
+.fullframe .titlesafe.bottom {
+	bottom: 0vh;
+	top: auto;
+	position: absolute;
+}
+ .actionsafe .titlesafe.bottom {
+	bottom: 1.5vh;
+	top: auto;
+	position: absolute;
+}
+.titlesafe .actionsafe.bottom {
+	bottom: -1.5vh;
+	top: auto;
+	position: absolute;
+}
+.titlesafe .fullframe.bottom {
+	bottom: -5vh;
+	top: auto;
+	position: absolute;
+}
+
+body .fullframe, .actionsafe .actionsafe, .titlesafe .titlesafe {
+	left: 0vw;
+	top: 0vh;
+	position: absolute;
+}
+.actionsafe > .actionsafe.left, .titlesafe > .titlesafe.left {
+	left: 0vw;
+	right: auto;
+	position: absolute;
+}
+.actionsafe > .actionsafe.top, .titlesafe > .titlesafe.top {
+	top: 0vh;
+	bottom: auto;
+	position: absolute;
+}
+.actionsafe > .actionsafe.right, .titlesafe > .titlesafe.right {
+	right: 0vw;
+	left: auto;
+	position: absolute;
+}
+.actionsafe > .actionsafe.bottom, .titlesafe > .titlesafe.bottom {
+	bottom: 0vh;
+	top: auto;
+	position: absolute;
+}
