@@ -11,13 +11,22 @@ export default {
         update: function () {
         },
         invoke: function () {
-            return '';
+            return ''
         },
         description: function () {
-            return '';
+            return ''
         },
         template_host_info: function () {
-            return '';
+            return ''
+        }
+    },
+    onIframeMessage: function(message){
+        if(message.data.functionName){
+            var functionName = message.data.functionName
+            delete message.data.functionName
+            if(global.hasOwnProperty(functionName) && typeof global[functionName] === 'function') {
+                global[functionName].call(global, message.data)
+            }
         }
     },
     casparComponent: {
@@ -43,12 +52,13 @@ export default {
     },
     css: casparcgCss,
     install: function(Vue, otptions) {
-        global.play = Vue.play = this.globalFunctions.play;
-        global.stop = Vue.stop = this.globalFunctions.stop;
-        global.next = Vue.next = this.globalFunctions.next;
-        global.update = Vue.update = this.globalFunctions.update;
-        global.invoke = Vue.invoke = this.globalFunctions.invoke;
-        global.description = Vue.description = this.globalFunctions.description;
-        global.template_host_info = Vue.template_host_info = this.globalFunctions.template_host_info;
+        global.play = Vue.play = this.globalFunctions.play
+        global.stop = Vue.stop = this.globalFunctions.stop
+        global.next = Vue.next = this.globalFunctions.next
+        global.update = Vue.update = this.globalFunctions.update
+        global.invoke = Vue.invoke = this.globalFunctions.invoke
+        global.description = Vue.description = this.globalFunctions.description
+        global.template_host_info = Vue.template_host_info = this.globalFunctions.template_host_info
+        window.onmessage = this.onIframeMessage
     }
 }
