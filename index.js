@@ -23,12 +23,9 @@ export default {
     onIframeMessage: function(message){
       var templateData = message.data
       if (typeof templateData === 'string') {
-          console.log(templateData)
           templateData = templateData.replace(/^(<templateData>|<componentData>|<data>)|(<\/templateData>|<\/componentData>|<\/data>)$/ig, '')
-          console.log(templateData)
           try {
               templateData = JSON.parse(decodeURI(templateData))
-              console.log(templateData)
           } catch (e) {}
       } 
       if(templateData && typeof templateData === 'object') {
