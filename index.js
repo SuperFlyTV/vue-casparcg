@@ -23,17 +23,17 @@ export default {
     onIframeMessage: function(message){
       var templateData = message.data
       if (typeof templateData === 'string') {
-          templateData = templateData.replace(/^(<templateData>|<componentData>|<data>)|(<\/templateData>|<\/componentData>|<\/data>)$/ig, '')
-          try {
-              templateData = JSON.parse(decodeURI(templateData))
-          } catch (e) {}
+        templateData = templateData.replace(/^(<templateData>|<componentData>|<data>)|(<\/templateData>|<\/componentData>|<\/data>)$/ig, '')
+        try {
+          templateData = JSON.parse(decodeURI(templateData))
+        } catch (e) {}
       } 
       if(templateData && typeof templateData === 'object') {
-          if(templateData.functionName){
+        if(templateData.functionName){
           var functionName = templateData.functionName
           delete templateData.functionName
           if(global.hasOwnProperty(functionName) && typeof global[functionName] === 'function') {
-              global[functionName].call(global, templateData)
+            global[functionName].call(global, templateData)
           }
         }
       }
