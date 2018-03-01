@@ -3,6 +3,8 @@
 	padding: 0;
 	white-space: nowrap;
 	overflow: hidden;
+	text-rendering: geometricPrecision;
+    font-kerning: normal;
 }
 html {
     -webkit-box-sizing: border-box;

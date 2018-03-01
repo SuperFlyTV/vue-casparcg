@@ -11,7 +11,6 @@ export default {
         update: function () {
         },
         invoke: function () {
-            return ''
         },
         description: function () {
             return ''
