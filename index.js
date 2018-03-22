@@ -72,7 +72,7 @@ export default {
         global.next = Vue.next = this.globalFunctions.next
         global.update = Vue.update = this.globalFunctions.update
         global.seek = Vue.seek = this.globalFunctions.seek
-        global.preview = Vue.seek = this.globalFunctions.seek
+        global.preview = Vue.preview = this.globalFunctions.preview
         global.invoke = Vue.invoke = this.globalFunctions.invoke
         global.description = Vue.description = this.globalFunctions.description
         global.template_host_info = Vue.template_host_info = this.globalFunctions.template_host_info
